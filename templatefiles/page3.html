@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word Search</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#search" ).autocomplete({
+      source: "/search/",
+      minLength: 1,
+      });
+    });
+    </script>
+</head>
+<body bgcolor= #e9967a>
+  <br>
+  <br>
+  <div class="ui-widget"
+
+  </div>
+  <basefont size="7"><h1><b>Word Search</b></h1>
+
+  <img src="{% static 'image.jpg' %}" alt="Search Symbol">
+  <form action= "/search_results" method= "GET">
+      <br>
+      <input id="search" type="text" placeholder="Search here..." name="term" size="25" onfocus="this.placeholder = ''"
+       onblur="this.placeholder = 'Search here...'" />
+      <input type="submit" value="Search">
+  </form>
+
+
+      {% for message in messages %}
+      <h3>{{ message }}</h3>
+      {% endfor %}
+  </div>
+
+
+</body>
+</html>
