@@ -1,7 +1,7 @@
-fullthrottle /n
-Search words from dataset with some specified constraints /n
-fullthrottle is the name of the project /n
-page3.html is the simple frontend html page based on jinja2 template language, jquery and css and javascript. /n
+fullthrottle 
+Search words from dataset with some specified constraints 
+fullthrottle is the name of the project 
+page3.html is the simple frontend html page based on jinja2 template language, jquery and css and javascript. 
 
 API Endpoints. GET http://localhost:8000 This endpoint renders a search box in the browser.
 
